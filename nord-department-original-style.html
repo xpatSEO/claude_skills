@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location garde-meuble Nord - Département 59 : Stockez en toute sécurité dans le Nord de la France</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Palette basée sur le template original */
+            --primary-blue: #003d82;
+            --primary-orange: #f7941d;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --text-muted: #999999;
+            --background: #ffffff;
+            --background-light: #f5f5f5;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background: var(--background);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--primary-orange);
+            color: var(--background);
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Header / Navigation */
+        header {
+            background: var(--background);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Hero Section avec Image */
+        .hero-section {
+            position: relative;
+            background: var(--background-light);
+            text-align: center;
+            padding: 40px 20px 30px;
+            border-bottom: 3px solid var(--primary-orange);
+        }
+
+        .hero-image-container {
+            max-width: 1200px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            color: var(--primary-blue);
+            font-weight: 900;
+            line-height: 1.3;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* Intro Text */
+        .intro-text {
+            background: var(--background);
+            padding: 40px;
+            margin-bottom: 50px;
+            border-left: 4px solid var(--primary-orange);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .intro-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .intro-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Section Headings */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-orange);
+        }
+
+        /* Cities List */
+        .cities-section {
+            margin-bottom: 60px;
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .city-link {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            background: var(--background);
+        }
+
+        .city-link:hover {
+            background: var(--background-light);
+            color: var(--primary-orange);
+            padding-left: 25px;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: var(--background-light);
+            padding: 40px;
+            margin-bottom: 50px;
+            border-radius: 5px;
+        }
+
+        .info-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .info-section p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Sidebar (si nécessaire) */
+        .sidebar {
+            background: var(--background);
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-orange);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-blue);
+            color: var(--background);
+            padding: 50px 20px 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary-orange);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-orange);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Table (pour données structurées dans le footer) */
+        .footer-table {
+            width: 100%;
+            font-size: 0.85rem;
+            margin-top: 20px;
+        }
+
+        .footer-table td {
+            padding: 5px 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-table a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+        }
+
+        .footer-table a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .cities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .intro-text,
+            .info-section {
+                padding: 25px;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animations subtiles */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span>📞 Service client : 01 23 45 67 89</span>
+            <span>✉️ contact@location-gardemeuble.fr</span>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Location-GardeMeuble.fr</a>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#departements">Départements</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#tarifs">Tarifs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-image-container">
+            <img src="https://images.unsplash.com/photo-1590845947670-c009801ffa74?w=800&h=500&fit=crop" alt="Architecture Nord de la France">
+        </div>
+        <h1 class="hero-title">Location garde-meuble Nord - Département 59 : Stockez en toute sécurité dans le Nord de la France</h1>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Intro Text -->
+        <div class="intro-text fade-in">
+            <p>Le département du Nord (59), situé dans la région Hauts-de-France, est l'un des départements les plus dynamiques et peuplés de France. Avec des villes majeures comme Lille, Roubaix, Tourcoing, Valenciennes et Dunkerque, le Nord offre un tissu urbain dense où les besoins en solutions de stockage sont importants.</p>
+
+            <p>Que vous soyez un particulier en plein déménagement, un étudiant ayant besoin d'entreposer vos affaires pendant les vacances, ou une entreprise cherchant à optimiser son espace, les services de garde-meuble dans le Nord (59) constituent une solution pratique et sécurisée.</p>
+
+            <p>Les garde-meubles du département proposent des boxes de différentes tailles, allant de quelques m² pour des cartons et petits objets, jusqu'à plusieurs dizaines de m² pour stocker le mobilier complet d'une maison ou les archives d'une entreprise. La plupart des installations sont sécurisées 24h/24 avec vidéosurveillance, alarmes et accès contrôlé.</p>
+        </div>
+
+        <!-- Cities Section -->
+        <section class="cities-section">
+            <h2 class="section-title">Principales villes du Nord (59)</h2>
+            <div class="cities-grid">
+                <a href="#" class="city-link">Garde-meuble à Lille</a>
+                <a href="#" class="city-link">Garde-meuble à Roubaix</a>
+                <a href="#" class="city-link">Garde-meuble à Tourcoing</a>
+                <a href="#" class="city-link">Garde-meuble à Dunkerque</a>
+                <a href="#" class="city-link">Garde-meuble à Villeneuve-d'Ascq</a>
+                <a href="#" class="city-link">Garde-meuble à Valenciennes</a>
+                <a href="#" class="city-link">Garde-meuble à Douai</a>
+                <a href="#" class="city-link">Garde-meuble à Marcq-en-Barœul</a>
+                <a href="#" class="city-link">Garde-meuble à Cambrai</a>
+                <a href="#" class="city-link">Garde-meuble à Maubeuge</a>
+                <a href="#" class="city-link">Garde-meuble à Armentières</a>
+                <a href="#" class="city-link">Garde-meuble à Hazebrouck</a>
+                <a href="#" class="city-link">Garde-meuble à Lambersart</a>
+                <a href="#" class="city-link">Garde-meuble à Wasquehal</a>
+                <a href="#" class="city-link">Garde-meuble à Croix</a>
+                <a href="#" class="city-link">Garde-meuble à Wattrelos</a>
+                <a href="#" class="city-link">Garde-meuble à Denain</a>
+                <a href="#" class="city-link">Garde-meuble à Caudry</a>
+                <a href="#" class="city-link">Garde-meuble à Halluin</a>
+                <a href="#" class="city-link">Garde-meuble à La Madeleine</a>
+                <a href="#" class="city-link">Garde-meuble à Mons-en-Barœul</a>
+                <a href="#" class="city-link">Garde-meuble à Sin-le-Noble</a>
+                <a href="#" class="city-link">Garde-meuble à Anzin</a>
+                <a href="#" class="city-link">Garde-meuble à Lomme</a>
+                <a href="#" class="city-link">Garde-meuble à Saint-André-lez-Lille</a>
+                <a href="#" class="city-link">Garde-meuble à Hem</a>
+                <a href="#" class="city-link">Garde-meuble à Lys-lez-Lannoy</a>
+                <a href="#" class="city-link">Garde-meuble à Haubourdin</a>
+                <a href="#" class="city-link">Garde-meuble à Grande-Synthe</a>
+                <a href="#" class="city-link">Garde-meuble à Bailleul</a>
+                <a href="#" class="city-link">Garde-meuble à Ronchin</a>
+                <a href="#" class="city-link">Garde-meuble à Somain</a>
+                <a href="#" class="city-link">Garde-meuble à Faches-Thumesnil</a>
+                <a href="#" class="city-link">Garde-meuble à Comines</a>
+                <a href="#" class="city-link">Garde-meuble à Wattignies</a>
+                <a href="#" class="city-link">Garde-meuble à Seclin</a>
+                <a href="#" class="city-link">Garde-meuble à Roncq</a>
+                <a href="#" class="city-link">Garde-meuble à Saint-Amand-les-Eaux</a>
+                <a href="#" class="city-link">Garde-meuble à Loos</a>
+                <a href="#" class="city-link">Garde-meuble à Fourmies</a>
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="info-section">
+            <h2>Pourquoi choisir un garde-meuble dans le Nord (59) ?</h2>
+
+            <p><strong>Sécurité optimale :</strong> Les garde-meubles du Nord sont équipés de systèmes de surveillance vidéo 24h/24, d'alarmes anti-intrusion et de contrôles d'accès stricts. Vos biens sont protégés dans des boxes individuels fermés à clé.</p>
+
+            <p><strong>Flexibilité et accessibilité :</strong> La plupart des établissements proposent des horaires d'accès étendus, certains même 7j/7. Vous pouvez accéder à vos affaires quand vous en avez besoin, selon les modalités de votre contrat.</p>
+
+            <p><strong>Tarifs compétitifs :</strong> Les prix varient en fonction de la taille du box, de la durée de location et des services additionnels (assurance, manutention, etc.). Les contrats sont généralement flexibles, allant de la location courte durée (quelques semaines) à la longue durée (plusieurs années).</p>
+
+            <p><strong>Conditions de conservation optimales :</strong> De nombreux garde-meubles du Nord proposent des espaces chauffés, ventilés ou climatisés pour garantir la bonne conservation de vos biens, notamment pour les meubles en bois, les documents papier ou les objets fragiles.</p>
+
+            <p><strong>Proximité géographique :</strong> Avec des dizaines de sites répartis dans tout le département, vous trouverez facilement un garde-meuble proche de votre domicile ou de votre lieu de travail, facilitant les allers-retours.</p>
+        </section>
+
+        <!-- Additional Cities -->
+        <section class="cities-section">
+            <h2 class="section-title">Autres communes du Nord</h2>
+            <div class="cities-grid">
+                <a href="#" class="city-link">Garde-meuble à Aulnoye-Aymeries</a>
+                <a href="#" class="city-link">Garde-meuble à Jeumont</a>
+                <a href="#" class="city-link">Garde-meuble à Coudekerque-Branche</a>
+                <a href="#" class="city-link">Garde-meuble à Hautmont</a>
+                <a href="#" class="city-link">Garde-meuble à Orchies</a>
+                <a href="#" class="city-link">Garde-meuble à Anzin</a>
+                <a href="#" class="city-link">Garde-meuble à Condé-sur-l'Escaut</a>
+                <a href="#" class="city-link">Garde-meuble à Onnaing</a>
+                <a href="#" class="city-link">Garde-meuble à Bruay-sur-l'Escaut</a>
+                <a href="#" class="city-link">Garde-meuble à Waziers</a>
+                <a href="#" class="city-link">Garde-meuble à Escaudain</a>
+                <a href="#" class="city-link">Garde-meuble à Leers</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Location box de stockage</a></li>
+                    <li><a href="#">Garde-meuble particulier</a></li>
+                    <li><a href="#">Stockage professionnel</a></li>
+                    <li><a href="#">Stockage archive</a></li>
+                    <li><a href="#">Stockage véhicule</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Départements</h4>
+                <ul>
+                    <li><a href="#">Nord (59)</a></li>
+                    <li><a href="#">Pas-de-Calais (62)</a></li>
+                    <li><a href="#">Somme (80)</a></li>
+                    <li><a href="#">Aisne (02)</a></li>
+                    <li><a href="#">Oise (60)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="#">Qui sommes-nous</a></li>
+                    <li><a href="#">Comment ça marche</a></li>
+                    <li><a href="#">Tarifs</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">CGV/CGU</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom avec toutes les villes -->
+        <div class="footer-bottom">
+            <p style="margin-bottom: 20px;"><strong>Garde-meuble par ville dans le Nord (59)</strong></p>
+            <table class="footer-table">
+                <tr>
+                    <td><a href="#">Lille</a></td>
+                    <td><a href="#">Roubaix</a></td>
+                    <td><a href="#">Tourcoing</a></td>
+                    <td><a href="#">Dunkerque</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Valenciennes</a></td>
+                    <td><a href="#">Douai</a></td>
+                    <td><a href="#">Villeneuve-d'Ascq</a></td>
+                    <td><a href="#">Cambrai</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">Maubeuge</a></td>
+                    <td><a href="#">Armentières</a></td>
+                    <td><a href="#">Hazebrouck</a></td>
+                    <td><a href="#">Lambersart</a></td>
+                </tr>
+            </table>
+            <p style="margin-top: 30px;">&copy; 2026 Location-GardeMeuble.fr - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.cities-section, .info-section').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
