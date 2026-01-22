@@ -124,6 +124,60 @@
             margin-bottom: 0;
         }
 
+        /* Key Numbers Section */
+        .key-numbers-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #002860 100%);
+            padding: 50px 40px;
+            margin-bottom: 50px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 61, 130, 0.2);
+        }
+
+        .key-numbers-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--background);
+            font-weight: 700;
+            margin-bottom: 35px;
+            text-align: center;
+        }
+
+        .key-numbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .key-number-item {
+            text-align: center;
+            padding: 25px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .key-number-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .key-number-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary-orange);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .key-number-label {
+            font-size: 0.95rem;
+            color: var(--background);
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
         /* Section Titles */
         .section-title {
             font-family: 'Playfair Display', serif;
@@ -284,8 +338,18 @@
             }
 
             .intro-text,
-            .info-section {
+            .info-section,
+            .key-numbers-section {
                 padding: 25px;
+            }
+
+            .key-numbers-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .key-number-value {
+                font-size: 2.5rem;
             }
 
             .footer-cities-table {
@@ -326,6 +390,37 @@
 
             <p>Les garde-meubles du département proposent des boxes de différentes tailles, allant de quelques m² pour des cartons et petits objets, jusqu'à plusieurs dizaines de m² pour stocker le mobilier complet d'une maison ou les archives d'une entreprise. La plupart des installations sont sécurisées 24h/24 avec vidéosurveillance, alarmes et accès contrôlé.</p>
         </div>
+
+        <!-- Key Numbers Section -->
+        <section class="key-numbers-section">
+            <h2>Le Nord en chiffres clés</h2>
+            <div class="key-numbers-grid">
+                <div class="key-number-item">
+                    <div class="key-number-value">2,6M</div>
+                    <div class="key-number-label">d'habitants</div>
+                </div>
+                <div class="key-number-item">
+                    <div class="key-number-value">650+</div>
+                    <div class="key-number-label">communes</div>
+                </div>
+                <div class="key-number-item">
+                    <div class="key-number-value">5 747</div>
+                    <div class="key-number-label">km² de superficie</div>
+                </div>
+                <div class="key-number-item">
+                    <div class="key-number-value">150+</div>
+                    <div class="key-number-label">sites de stockage</div>
+                </div>
+                <div class="key-number-item">
+                    <div class="key-number-value">24/7</div>
+                    <div class="key-number-label">accès sécurisé</div>
+                </div>
+                <div class="key-number-item">
+                    <div class="key-number-value">2-300</div>
+                    <div class="key-number-label">m² de boxes disponibles</div>
+                </div>
+            </div>
+        </section>
 
         <!-- Cities Section -->
         <section class="cities-section">
