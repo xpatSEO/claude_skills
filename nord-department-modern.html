@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garde-Meuble Nord (59) - Stockage Sécurisé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --steel-dark: #1a2332;
+            --steel-medium: #2d3e50;
+            --steel-light: #647589;
+            --concrete: #e8ecef;
+            --white: #ffffff;
+            --accent-orange: #ff6b35;
+            --accent-blue: #4a90e2;
+            --grid-size: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: var(--concrete);
+            color: var(--steel-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated background grid */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(var(--steel-light) 1px, transparent 1px),
+                linear-gradient(90deg, var(--steel-light) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.03;
+            z-index: 0;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            height: 70vh;
+            background: linear-gradient(135deg, var(--steel-dark) 0%, var(--steel-medium) 100%);
+            overflow: hidden;
+        }
+
+        .header-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.25;
+            filter: grayscale(100%) contrast(1.2);
+            animation: slowZoom 30s ease-in-out infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, transparent 0%, rgba(26, 35, 50, 0.8) 100%);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 5% 8vh;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .department-badge {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 8px 24px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            width: fit-content;
+            transform: skew(-5deg);
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px) skew(-5deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) skew(-5deg);
+            }
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3rem, 8vw, 6rem);
+            color: var(--white);
+            line-height: 0.95;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            animation: slideInUp 1s ease-out 0.2s both;
+        }
+
+        @keyframes slideInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--concrete);
+            font-weight: 300;
+            max-width: 700px;
+            animation: slideInUp 1s ease-out 0.4s both;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--white);
+            box-shadow: 0 2px 20px rgba(26, 35, 50, 0.1);
+            z-index: 100;
+            animation: slideDown 0.6s ease-out 0.8s both;
+        }
+
+        @keyframes slideDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 70px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--steel-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-orange);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 5%;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-bottom: 120px;
+            animation: fadeIn 1s ease-out 1s both;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .intro-text h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--steel-dark);
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+
+        .intro-text p {
+            font-size: 1.1rem;
+            color: var(--steel-light);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-left: 4px solid var(--accent-orange);
+            box-shadow: 0 4px 20px rgba(26, 35, 50, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(26, 35, 50, 0.15);
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            color: var(--accent-orange);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--steel-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        /* Cities Section */
+        .cities-section {
+            margin-bottom: 100px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            color: var(--steel-dark);
+        }
+
+        .section-line {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-orange) 0%, transparent 100%);
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .city-card {
+            background: var(--white);
+            padding: 25px;
+            text-decoration: none;
+            color: var(--steel-dark);
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .city-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 107, 53, 0.1) 50%, transparent 100%);
+            transition: left 0.5s ease;
+        }
+
+        .city-card:hover::before {
+            left: 100%;
+        }
+
+        .city-card:hover {
+            transform: translateX(10px);
+            border-left: 3px solid var(--accent-orange);
+            box-shadow: 0 4px 20px rgba(26, 35, 50, 0.1);
+        }
+
+        .city-card::after {
+            content: '→';
+            position: absolute;
+            right: 25px;
+            opacity: 0;
+            transition: opacity 0.3s ease, right 0.3s ease;
+            color: var(--accent-orange);
+        }
+
+        .city-card:hover::after {
+            opacity: 1;
+            right: 20px;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: var(--white);
+            padding: 80px 60px;
+            margin-bottom: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-orange) 0%, var(--accent-blue) 100%);
+        }
+
+        .info-section h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--steel-dark);
+            margin-bottom: 30px;
+        }
+
+        .info-content {
+            columns: 2;
+            column-gap: 60px;
+            font-size: 1.05rem;
+            color: var(--steel-light);
+            line-height: 1.8;
+        }
+
+        .info-content p {
+            margin-bottom: 20px;
+            break-inside: avoid;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--steel-dark);
+            color: var(--concrete);
+            padding: 60px 5%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+        }
+
+        .footer-section h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+            letter-spacing: 1px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--concrete);
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-orange);
+            padding-left: 10px;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 40px auto 0;
+            padding-top: 30px;
+            border-top: 1px solid var(--steel-medium);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--steel-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .intro-section {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .info-content {
+                columns: 1;
+            }
+
+            .info-section {
+                padding: 50px 30px;
+            }
+
+            .cities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+
+    <header>
+        <img src="https://images.unsplash.com/photo-1590845947670-c009801ffa74?w=1600&h=900&fit=crop" alt="Nord" class="header-image">
+        <div class="header-overlay"></div>
+        <div class="header-content">
+            <div class="department-badge">Département 59</div>
+            <h1>Garde-Meuble<br>Nord</h1>
+            <p class="header-subtitle">Solutions de stockage sécurisé dans le Nord de la France</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--accent-orange);">LOCATION-GARDEMEUBLE.FR</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#villes">Villes</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="intro-section">
+            <div class="intro-text">
+                <h2>Stockez en toute sécurité</h2>
+                <p>Le département du Nord (59) offre de nombreuses solutions de garde-meuble adaptées à vos besoins. Que vous soyez particulier ou professionnel, trouvez l'espace de stockage idéal près de chez vous.</p>
+                <p>Nos partenaires dans tout le département proposent des boxes sécurisés, accessibles 24h/24, avec une surveillance permanente et des conditions optimales de conservation.</p>
+                <p>Du centre de Lille aux communes périphériques, découvrez une offre complète de stockage flexible, du box de quelques m² aux espaces de plusieurs centaines de m².</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Sites disponibles</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Accès sécurisé</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Clients satisfaits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2-300m²</div>
+                    <div class="stat-label">Tailles disponibles</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cities-section reveal" id="villes">
+            <div class="section-header">
+                <h2>Villes du Nord</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="cities-grid">
+                <a href="#" class="city-card">Lille</a>
+                <a href="#" class="city-card">Roubaix</a>
+                <a href="#" class="city-card">Tourcoing</a>
+                <a href="#" class="city-card">Dunkerque</a>
+                <a href="#" class="city-card">Villeneuve-d'Ascq</a>
+                <a href="#" class="city-card">Valenciennes</a>
+                <a href="#" class="city-card">Douai</a>
+                <a href="#" class="city-card">Marcq-en-Barœul</a>
+                <a href="#" class="city-card">Cambrai</a>
+                <a href="#" class="city-card">Maubeuge</a>
+                <a href="#" class="city-card">Armentières</a>
+                <a href="#" class="city-card">Hazebrouck</a>
+                <a href="#" class="city-card">Lambersart</a>
+                <a href="#" class="city-card">Wasquehal</a>
+                <a href="#" class="city-card">Croix</a>
+                <a href="#" class="city-card">Wattrelos</a>
+                <a href="#" class="city-card">Denain</a>
+                <a href="#" class="city-card">Caudry</a>
+                <a href="#" class="city-card">Halluin</a>
+                <a href="#" class="city-card">La Madeleine</a>
+                <a href="#" class="city-card">Mons-en-Barœul</a>
+                <a href="#" class="city-card">Sin-le-Noble</a>
+                <a href="#" class="city-card">Anzin</a>
+                <a href="#" class="city-card">Lomme</a>
+            </div>
+        </section>
+
+        <section class="info-section reveal" id="services">
+            <h3>Pourquoi choisir un garde-meuble dans le Nord ?</h3>
+            <div class="info-content">
+                <p>Le Nord est un département dynamique qui nécessite des solutions de stockage flexibles et sécurisées. Que vous soyez en plein déménagement, en phase de rénovation, ou que vous ayez besoin d'espace supplémentaire pour votre entreprise, les garde-meubles du département 59 offrent une réponse adaptée.</p>
+
+                <p>Les installations modernes garantissent la sécurité de vos biens avec des systèmes de surveillance vidéo, des alarmes anti-intrusion, et un contrôle d'accès sécurisé. La plupart des sites sont climatisés pour préserver vos objets de valeur, documents et meubles dans les meilleures conditions.</p>
+
+                <p>L'accessibilité est un critère essentiel : la majorité des garde-meubles du Nord proposent des horaires étendus, voire un accès 24h/24, vous permettant de récupérer vos affaires quand vous en avez besoin. Les emplacements stratégiques près des grands axes routiers facilitent les déplacements.</p>
+
+                <p>Les tarifs sont compétitifs et adaptés à tous les budgets. Des formules courte durée aux contrats longue durée, vous bénéficiez d'une grande flexibilité sans engagement contraignant. De nombreux professionnels proposent également des services complémentaires comme la location de véhicules ou la vente de fournitures de déménagement.</p>
+            </div>
+        </section>
+
+        <section class="cities-section reveal">
+            <div class="section-header">
+                <h2>Plus de communes</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="cities-grid">
+                <a href="#" class="city-card">Saint-André-lez-Lille</a>
+                <a href="#" class="city-card">Hem</a>
+                <a href="#" class="city-card">Lys-lez-Lannoy</a>
+                <a href="#" class="city-card">Haubourdin</a>
+                <a href="#" class="city-card">Grande-Synthe</a>
+                <a href="#" class="city-card">Bailleul</a>
+                <a href="#" class="city-card">Ronchin</a>
+                <a href="#" class="city-card">Somain</a>
+                <a href="#" class="city-card">Faches-Thumesnil</a>
+                <a href="#" class="city-card">Comines</a>
+                <a href="#" class="city-card">Wattignies</a>
+                <a href="#" class="city-card">Seclin</a>
+                <a href="#" class="city-card">Roncq</a>
+                <a href="#" class="city-card">Saint-Amand-les-Eaux</a>
+                <a href="#" class="city-card">Loos</a>
+                <a href="#" class="city-card">Fourmies</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Box de stockage</a></li>
+                    <li><a href="#">Garde-meuble longue durée</a></li>
+                    <li><a href="#">Stockage professionnel</a></li>
+                    <li><a href="#">Archives et documents</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Régions</h4>
+                <ul>
+                    <li><a href="#">Métropole lilloise</a></li>
+                    <li><a href="#">Valenciennes</a></li>
+                    <li><a href="#">Dunkerque</a></li>
+                    <li><a href="#">Cambrai</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="#">Tarifs</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Conseils stockage</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">CGV</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Location-GardeMeuble.fr - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
