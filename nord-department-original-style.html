@@ -33,67 +33,51 @@
             line-height: 1.7;
         }
 
-        /* Top Bar */
-        .top-bar {
-            background: var(--primary-orange);
-            color: var(--background);
-            padding: 8px 0;
-            font-size: 0.85rem;
+        /* Top Navigation Bar (exactement comme l'original) */
+        .top-navbar {
+            background: var(--primary-blue);
+            padding: 0;
+            border-bottom: 3px solid var(--primary-orange);
         }
 
-        .top-bar-content {
+        .top-navbar-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
         }
 
-        /* Header / Navigation */
+        .top-navbar-content a {
+            color: var(--background);
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            display: inline-block;
+            transition: background 0.3s ease;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .top-navbar-content a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .top-navbar-content a:last-child {
+            border-right: none;
+        }
+
+        /* Header / Navigation - conservé strictement */
         header {
             background: var(--background);
-            border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            position: relative;
         }
 
         .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: none; /* Masqué car pas dans l'original */
         }
 
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--primary-orange);
-        }
+        /* Pas de logo ni de navigation dans le header selon le screenshot original */
 
         /* Hero Section avec Image */
         .hero-section {
@@ -375,29 +359,14 @@
     </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="top-bar-content">
-            <span>📞 Service client : 01 23 45 67 89</span>
-            <span>✉️ contact@location-gardemeuble.fr</span>
+    <!-- Top Navigation Bar - Exactement comme l'original -->
+    <nav class="top-navbar">
+        <div class="top-navbar-content">
+            <a href="#">Accueil</a>
+            <a href="#">Location garde-meuble</a>
+            <a href="#">Contact</a>
         </div>
-    </div>
-
-    <!-- Header / Navigation -->
-    <header>
-        <div class="header-content">
-            <a href="#" class="logo">Location-GardeMeuble.fr</a>
-            <nav>
-                <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#departements">Départements</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#tarifs">Tarifs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero-section">
