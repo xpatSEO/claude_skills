@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garde-Meuble Nord (59) | Location de Box de Stockage</title>
+    <meta name="description" content="Trouvez votre garde-meuble dans le Nord (59). Comparez les offres de box de stockage à Lille, Roubaix, Tourcoing, Dunkerque et toutes les villes du département.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Industrial color palette */
+            --concrete: #1a1a1a;
+            --concrete-light: #2d2d2d;
+            --steel: #4a4a4a;
+            --warm-gray: #8a8478;
+            --sand: #c4b8a5;
+            --amber: #e8a948;
+            --amber-glow: #f5c163;
+            --cream: #f5f2ec;
+            --white: #fafaf8;
+
+            /* Typography */
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 8rem;
+
+            /* Transitions */
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--cream);
+            color: var(--concrete);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* Selection */
+        ::selection {
+            background: var(--amber);
+            color: var(--concrete);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: var(--space-sm) var(--space-md);
+            background: linear-gradient(to bottom, rgba(26,26,26,0.95), rgba(26,26,26,0));
+            transition: var(--transition-smooth);
+        }
+
+        .header.scrolled {
+            background: rgba(26,26,26,0.98);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--amber);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+        }
+
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--concrete);
+        }
+
+        .nav {
+            display: flex;
+            gap: var(--space-md);
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--sand);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--amber);
+            transition: var(--transition-fast);
+        }
+
+        .nav-link:hover {
+            color: var(--white);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--amber);
+            color: var(--concrete);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+            transition: var(--transition-fast);
+        }
+
+        .nav-cta:hover {
+            background: var(--amber-glow);
+            transform: translateY(-2px);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            background: var(--concrete);
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: var(--space-xl) var(--space-md) var(--space-lg);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(135deg, rgba(26,26,26,0.95) 0%, rgba(26,26,26,0.7) 100%),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 100px,
+                    rgba(232,169,72,0.03) 100px,
+                    rgba(232,169,72,0.03) 101px
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 100px,
+                    rgba(232,169,72,0.03) 100px,
+                    rgba(232,169,72,0.03) 101px
+                );
+        }
+
+        .hero-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+        }
+
+        .shape-1 {
+            top: 10%;
+            right: 5%;
+            width: 300px;
+            height: 300px;
+            border: 3px solid var(--amber);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .shape-2 {
+            bottom: 20%;
+            right: 15%;
+            width: 150px;
+            height: 150px;
+            background: var(--amber);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        .shape-3 {
+            top: 30%;
+            left: 10%;
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--sand);
+            transform: rotate(45deg);
+            animation: spin 30s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: rgba(232,169,72,0.15);
+            border: 1px solid rgba(232,169,72,0.3);
+            padding: 0.5rem 1rem;
+            margin-bottom: var(--space-md);
+            font-size: 0.85rem;
+            color: var(--amber);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--amber);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(4rem, 15vw, 12rem);
+            line-height: 0.85;
+            color: var(--white);
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-title span {
+            display: block;
+            animation: slideUp 0.8s ease-out backwards;
+        }
+
+        .hero-title span:nth-child(1) { animation-delay: 0.1s; }
+        .hero-title span:nth-child(2) { animation-delay: 0.2s; }
+        .hero-title span:nth-child(3) {
+            animation-delay: 0.3s;
+            color: var(--amber);
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .hero-title .dept-number {
+            font-size: 0.4em;
+            background: var(--amber);
+            color: var(--concrete);
+            padding: 0.2em 0.4em;
+            vertical-align: middle;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-description {
+            max-width: 600px;
+            color: var(--sand);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+            animation: slideUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out 0.5s backwards;
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            color: var(--amber);
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: var(--warm-gray);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: var(--space-xs);
+        }
+
+        /* ===== SEARCH SECTION ===== */
+        .search-section {
+            background: var(--white);
+            padding: var(--space-lg) var(--space-md);
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--concrete);
+            padding: var(--space-md);
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+        }
+
+        .search-form {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .search-input-wrapper {
+            flex: 1;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+            border: 2px solid var(--steel);
+            background: var(--concrete-light);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--amber);
+        }
+
+        .search-input::placeholder {
+            color: var(--warm-gray);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--warm-gray);
+        }
+
+        .search-btn {
+            padding: 1.2rem 2.5rem;
+            background: var(--amber);
+            color: var(--concrete);
+            border: none;
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 85% 100%, 0 100%);
+        }
+
+        .search-btn:hover {
+            background: var(--amber-glow);
+            transform: translateX(5px);
+        }
+
+        .popular-searches {
+            display: flex;
+            gap: var(--space-sm);
+            margin-top: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .popular-tag {
+            color: var(--warm-gray);
+            font-size: 0.8rem;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid var(--steel);
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .popular-tag:hover {
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
+        /* ===== CITIES GRID ===== */
+        .cities-section {
+            padding: var(--space-xl) var(--space-md);
+            background: var(--white);
+        }
+
+        .section-header {
+            max-width: 1400px;
+            margin: 0 auto var(--space-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--concrete);
+            line-height: 1;
+        }
+
+        .section-subtitle {
+            color: var(--warm-gray);
+            font-size: 1rem;
+            margin-top: var(--space-xs);
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: var(--space-xs);
+        }
+
+        .filter-tab {
+            padding: 0.6rem 1.2rem;
+            background: transparent;
+            border: 2px solid var(--sand);
+            color: var(--steel);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .filter-tab.active,
+        .filter-tab:hover {
+            background: var(--concrete);
+            border-color: var(--concrete);
+            color: var(--white);
+        }
+
+        .cities-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--space-sm);
+        }
+
+        .city-card {
+            background: var(--cream);
+            padding: var(--space-md);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border-left: 4px solid transparent;
+        }
+
+        .city-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--concrete) 0%, var(--concrete-light) 100%);
+            transform: translateX(-101%);
+            transition: var(--transition-smooth);
+        }
+
+        .city-card:hover {
+            border-left-color: var(--amber);
+        }
+
+        .city-card:hover::before {
+            transform: translateX(0);
+        }
+
+        .city-card-content {
+            position: relative;
+            z-index: 2;
+            transition: var(--transition-smooth);
+        }
+
+        .city-card:hover .city-card-content {
+            color: var(--white);
+        }
+
+        .city-name {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--concrete);
+            margin-bottom: var(--space-xs);
+            transition: var(--transition-smooth);
+        }
+
+        .city-card:hover .city-name {
+            color: var(--amber);
+        }
+
+        .city-meta {
+            display: flex;
+            gap: var(--space-sm);
+            color: var(--warm-gray);
+            font-size: 0.85rem;
+        }
+
+        .city-card:hover .city-meta {
+            color: var(--sand);
+        }
+
+        .city-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .city-arrow {
+            position: absolute;
+            right: var(--space-md);
+            top: 50%;
+            transform: translateY(-50%) translateX(-10px);
+            opacity: 0;
+            color: var(--amber);
+            font-size: 1.5rem;
+            transition: var(--transition-smooth);
+        }
+
+        .city-card:hover .city-arrow {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        /* Featured city */
+        .city-card.featured {
+            grid-column: span 2;
+            background: var(--concrete);
+            padding: var(--space-lg);
+        }
+
+        .city-card.featured::before {
+            background: linear-gradient(135deg, var(--amber) 0%, var(--amber-glow) 100%);
+        }
+
+        .city-card.featured .city-name {
+            color: var(--white);
+            font-size: 2.5rem;
+        }
+
+        .city-card.featured .city-meta {
+            color: var(--sand);
+        }
+
+        .city-card.featured:hover .city-name,
+        .city-card.featured:hover .city-card-content {
+            color: var(--concrete);
+        }
+
+        .city-card.featured:hover .city-meta {
+            color: var(--steel);
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--amber);
+            color: var(--concrete);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 0.3rem 0.6rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        /* ===== INFO SECTION ===== */
+        .info-section {
+            background: var(--cream);
+            padding: var(--space-xl) var(--space-md);
+            position: relative;
+        }
+
+        .info-section::before {
+            content: '59';
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            font-family: var(--font-display);
+            font-size: 30vw;
+            color: var(--sand);
+            opacity: 0.1;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .info-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .info-content h2 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--concrete);
+            line-height: 1;
+            margin-bottom: var(--space-md);
+        }
+
+        .info-content p {
+            color: var(--steel);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+        }
+
+        .info-list {
+            list-style: none;
+            display: grid;
+            gap: var(--space-sm);
+        }
+
+        .info-list li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            color: var(--steel);
+            font-size: 1rem;
+        }
+
+        .info-list li::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--amber);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+            flex-shrink: 0;
+        }
+
+        .info-visual {
+            position: relative;
+        }
+
+        .info-card {
+            background: var(--concrete);
+            padding: var(--space-lg);
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+        }
+
+        .info-card-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--amber);
+            margin-bottom: var(--space-md);
+        }
+
+        .price-display {
+            display: flex;
+            align-items: baseline;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-sm);
+        }
+
+        .price-from {
+            color: var(--warm-gray);
+            font-size: 0.9rem;
+        }
+
+        .price-amount {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .price-period {
+            color: var(--sand);
+            font-size: 1rem;
+        }
+
+        .price-note {
+            color: var(--warm-gray);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--steel);
+            padding-top: var(--space-sm);
+            margin-top: var(--space-sm);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: var(--concrete);
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200%;
+            height: 100%;
+            background: radial-gradient(ellipse at center top, rgba(232,169,72,0.15) 0%, transparent 60%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: var(--space-md);
+        }
+
+        .cta-title span {
+            color: var(--amber);
+        }
+
+        .cta-description {
+            color: var(--sand);
+            font-size: 1.1rem;
+            margin-bottom: var(--space-lg);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: var(--transition-fast);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--amber);
+            color: var(--concrete);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 90% 100%, 0 100%);
+        }
+
+        .btn-primary:hover {
+            background: var(--amber-glow);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--steel);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--amber);
+            color: var(--amber);
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: var(--white);
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: var(--space-lg);
+        }
+
+        .faq-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--concrete);
+            margin-bottom: var(--space-xs);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--sand);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: var(--space-md) 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--concrete);
+            transition: var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            color: var(--amber);
+        }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .faq-icon::before,
+        .faq-icon::after {
+            content: '';
+            position: absolute;
+            background: var(--amber);
+            transition: var(--transition-fast);
+        }
+
+        .faq-icon::before {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .faq-icon::after {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        .faq-item.active .faq-icon::after {
+            transform: translateX(-50%) rotate(90deg);
+            opacity: 0;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding-bottom: var(--space-md);
+            color: var(--steel);
+            line-height: 1.8;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--concrete);
+            padding: var(--space-lg) var(--space-md) var(--space-md);
+        }
+
+        .footer-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-lg);
+            padding-bottom: var(--space-lg);
+            border-bottom: 1px solid var(--steel);
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: var(--space-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .footer-description {
+            color: var(--warm-gray);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: var(--space-sm);
+            letter-spacing: 0.05em;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: grid;
+            gap: var(--space-xs);
+        }
+
+        .footer-links a {
+            color: var(--warm-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--amber);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: var(--space-md);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .footer-copy {
+            color: var(--warm-gray);
+            font-size: 0.85rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .footer-legal a {
+            color: var(--warm-gray);
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .footer-legal a:hover {
+            color: var(--amber);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .info-container {
+                grid-template-columns: 1fr;
+                gap: var(--space-lg);
+            }
+
+            .info-section::before {
+                font-size: 50vw;
+                right: -10%;
+            }
+
+            .city-card.featured {
+                grid-column: span 1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 150px;
+            }
+
+            .hero-stats {
+                gap: var(--space-md);
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .search-form {
+                flex-direction: column;
+            }
+
+            .search-btn {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-md);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-xs);
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            margin: 5px 0;
+            transition: var(--transition-fast);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2z"/>
+                    </svg>
+                </div>
+                GARDE-MEUBLE
+            </a>
+            <nav class="nav">
+                <a href="#cities" class="nav-link">Villes</a>
+                <a href="#tarifs" class="nav-link">Tarifs</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-cta">Devis Gratuit</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Département Nord</div>
+            <h1 class="hero-title">
+                <span>GARDE</span>
+                <span>MEUBLE</span>
+                <span>NORD <span class="dept-number">59</span></span>
+            </h1>
+            <p class="hero-description">
+                Trouvez le box de stockage idéal dans le Nord. Comparez les offres de plus de 150 centres de self-stockage à Lille, Roubaix, Tourcoing, Dunkerque et dans tout le département.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Centres de stockage</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">89</div>
+                    <div class="stat-label">Villes desservies</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Accès permanent</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <form class="search-form">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Rechercher une ville dans le Nord (59)...">
+                </div>
+                <button type="submit" class="search-btn">RECHERCHER</button>
+            </form>
+            <div class="popular-searches">
+                <span style="color: var(--warm-gray); font-size: 0.8rem;">Populaires :</span>
+                <a href="#" class="popular-tag">Lille</a>
+                <a href="#" class="popular-tag">Roubaix</a>
+                <a href="#" class="popular-tag">Tourcoing</a>
+                <a href="#" class="popular-tag">Dunkerque</a>
+                <a href="#" class="popular-tag">Villeneuve-d'Ascq</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Grid -->
+    <section class="cities-section" id="cities">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">TOUTES LES VILLES</h2>
+                <p class="section-subtitle">Trouvez un garde-meuble près de chez vous dans le Nord</p>
+            </div>
+            <div class="filter-tabs">
+                <button class="filter-tab active">Toutes</button>
+                <button class="filter-tab">Métropole</button>
+                <button class="filter-tab">Littoral</button>
+                <button class="filter-tab">Avesnois</button>
+            </div>
+        </div>
+
+        <div class="cities-grid">
+            <!-- Featured City -->
+            <article class="city-card featured reveal">
+                <div class="city-card-content">
+                    <span class="featured-badge">Plus populaire</span>
+                    <h3 class="city-name">Lille</h3>
+                    <div class="city-meta">
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18M9 21V9"/>
+                            </svg>
+                            45 centres
+                        </span>
+                        <span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Dès 29€/mois
+                        </span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <!-- Regular Cities -->
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Roubaix</h3>
+                    <div class="city-meta">
+                        <span>18 centres</span>
+                        <span>Dès 25€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Tourcoing</h3>
+                    <div class="city-meta">
+                        <span>15 centres</span>
+                        <span>Dès 27€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Dunkerque</h3>
+                    <div class="city-meta">
+                        <span>12 centres</span>
+                        <span>Dès 24€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Villeneuve-d'Ascq</h3>
+                    <div class="city-meta">
+                        <span>14 centres</span>
+                        <span>Dès 32€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Valenciennes</h3>
+                    <div class="city-meta">
+                        <span>10 centres</span>
+                        <span>Dès 22€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Douai</h3>
+                    <div class="city-meta">
+                        <span>8 centres</span>
+                        <span>Dès 23€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Wattrelos</h3>
+                    <div class="city-meta">
+                        <span>6 centres</span>
+                        <span>Dès 26€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Marcq-en-Barœul</h3>
+                    <div class="city-meta">
+                        <span>7 centres</span>
+                        <span>Dès 35€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Cambrai</h3>
+                    <div class="city-meta">
+                        <span>5 centres</span>
+                        <span>Dès 20€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Maubeuge</h3>
+                    <div class="city-meta">
+                        <span>4 centres</span>
+                        <span>Dès 19€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+
+            <article class="city-card reveal">
+                <div class="city-card-content">
+                    <h3 class="city-name">Lambersart</h3>
+                    <div class="city-meta">
+                        <span>5 centres</span>
+                        <span>Dès 30€/mois</span>
+                    </div>
+                </div>
+                <span class="city-arrow">→</span>
+            </article>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-lg);">
+            <a href="#" class="btn btn-secondary" style="border-color: var(--concrete); color: var(--concrete);">
+                Voir les 89 villes →
+            </a>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section" id="tarifs">
+        <div class="info-container">
+            <div class="info-content reveal">
+                <h2>POURQUOI CHOISIR<br>UN GARDE-MEUBLE<br>DANS LE NORD ?</h2>
+                <p>
+                    Le département du Nord offre une large gamme de solutions de stockage adaptées à tous les besoins. Que vous soyez particulier en déménagement, professionnel ayant besoin d'espace supplémentaire, ou étudiant lillois, vous trouverez le box idéal.
+                </p>
+                <ul class="info-list">
+                    <li>Accès 24h/24 et 7j/7 dans la plupart des centres</li>
+                    <li>Vidéosurveillance et alarmes individuelles</li>
+                    <li>Contrats flexibles sans engagement longue durée</li>
+                    <li>Assurance incluse ou disponible en option</li>
+                    <li>Box de 1m² à 50m² selon vos besoins</li>
+                    <li>Proximité avec les grands axes autoroutiers</li>
+                </ul>
+            </div>
+            <div class="info-visual reveal">
+                <div class="info-card">
+                    <div class="info-card-title">TARIF MOYEN</div>
+                    <div class="price-display">
+                        <span class="price-from">À partir de</span>
+                        <span class="price-amount">19€</span>
+                        <span class="price-period">/mois</span>
+                    </div>
+                    <p class="price-note">
+                        * Prix constaté pour un box de 1m² dans le Nord. Les tarifs varient selon la taille, la localisation et les services inclus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-content reveal">
+            <h2 class="cta-title">BESOIN D'UN <span>DEVIS</span> ?</h2>
+            <p class="cta-description">
+                Comparez gratuitement les offres des centres de stockage du Nord et trouvez le meilleur rapport qualité-prix pour votre projet.
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">DEMANDER UN DEVIS</a>
+                <a href="tel:+33320000000" class="btn btn-secondary">NOUS APPELER</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="faq-header reveal">
+                <h2 class="faq-title">QUESTIONS FRÉQUENTES</h2>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Quelle taille de box choisir pour mon garde-meuble ?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Pour un studio ou quelques cartons, un box de 2 à 4m² suffit généralement. Pour un appartement T2/T3, comptez 5 à 10m². Pour une maison complète ou un déménagement professionnel, optez pour 15m² et plus. Nos conseillers peuvent vous aider à estimer votre besoin précis.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Mes affaires sont-elles assurées dans un garde-meuble ?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>La plupart des centres proposent une assurance de base incluse dans le tarif. Pour les objets de valeur, nous recommandons de souscrire une assurance complémentaire. Vérifiez également si votre assurance habitation couvre le stockage externe.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Puis-je accéder à mon box à tout moment ?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>La majorité des centres du Nord offrent un accès 24h/24 et 7j/7 grâce à un code personnel et/ou un badge d'accès. Certains centres ont des horaires restreints pour l'accès véhicule, renseignez-vous lors de votre réservation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Quelle est la durée minimum de location ?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Les contrats sont généralement flexibles avec une durée minimum d'un mois. Vous pouvez résilier à tout moment avec un préavis de 15 jours à 1 mois selon les centres. Certains proposent même des locations à la semaine.</p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal">
+                <button class="faq-question">
+                    Quels objets ne peut-on pas stocker ?
+                    <span class="faq-icon"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sont généralement interdits : les produits inflammables, explosifs ou dangereux, les denrées périssables, les animaux, les objets illicites, et les produits à forte odeur. Consultez le règlement intérieur de chaque centre pour la liste complète.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon" style="width: 30px; height: 30px;">
+                        <svg viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                            <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2z"/>
+                        </svg>
+                    </div>
+                    GARDE-MEUBLE
+                </div>
+                <p class="footer-description">
+                    Le comparateur de référence pour trouver votre solution de stockage dans le Nord et partout en France.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>VILLES POPULAIRES</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Garde-meuble Lille</a></li>
+                    <li><a href="#">Garde-meuble Roubaix</a></li>
+                    <li><a href="#">Garde-meuble Tourcoing</a></li>
+                    <li><a href="#">Garde-meuble Dunkerque</a></li>
+                    <li><a href="#">Garde-meuble Valenciennes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>INFORMATIONS</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Comment ça marche</a></li>
+                    <li><a href="#">Guide des tarifs</a></li>
+                    <li><a href="#">Conseils déménagement</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>RÉGIONS</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Hauts-de-France</a></li>
+                    <li><a href="#">Île-de-France</a></li>
+                    <li><a href="#">Auvergne-Rhône-Alpes</a></li>
+                    <li><a href="#">PACA</a></li>
+                    <li><a href="#">Toutes les régions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 Location Garde-Meuble. Tous droits réservés.</p>
+            <div class="footer-legal">
+                <a href="#">Mentions légales</a>
+                <a href="#">CGU</a>
+                <a href="#">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Open clicked if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+        // City card filter
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Search form enhancement
+        const searchInput = document.querySelector('.search-input');
+        const popularTags = document.querySelectorAll('.popular-tag');
+
+        popularTags.forEach(tag => {
+            tag.addEventListener('click', (e) => {
+                e.preventDefault();
+                searchInput.value = tag.textContent;
+                searchInput.focus();
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
