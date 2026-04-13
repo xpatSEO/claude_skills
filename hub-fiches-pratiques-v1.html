@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe - Hub des Fiches Pratiques</title>
+    <style>
+        :root {
+            --bg: #f3f4f6;
+            --wire-border: #9ca3af;
+            --accent: #2563eb;
+            --white: #ffffff;
+        }
+
+        body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; padding: 0; color: #1f2937; }
+        
+        /* HEADER */
+        header { background: #111827; color: white; padding: 20px 0; text-align: center; }
+        .nav-placeholder { border: 1px dashed #4b5563; width: 80%; margin: 0 auto; padding: 10px; }
+
+        /* SEARCH & FILTERS SECTION */
+        .search-area { background: var(--white); border-bottom: 2px solid var(--wire-border); padding: 40px 20px; }
+        .search-container { max-width: 800px; margin: 0 auto; text-align: center; }
+        
+        .search-bar { 
+            width: 100%; padding: 15px; border: 2px solid var(--wire-border); 
+            border-radius: 8px; font-size: 18px; margin-bottom: 20px;
+        }
+
+        .filters-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        select { padding: 10px; border: 1px solid var(--wire-border); border-radius: 4px; min-width: 180px; }
+
+        /* MAIN CONTENT */
+        .main-content { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 250px 1fr; gap: 30px; }
+
+        /* SIDEBAR FILTERS (Alternative or Additional) */
+        .sidebar { background: var(--white); border: 1px solid var(--wire-border); padding: 20px; height: fit-content; }
+        .filter-section { margin-bottom: 25px; }
+        .filter-section h4 { border-bottom: 1px solid #eee; padding-bottom: 5px; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; }
+        .filter-opt { display: flex; align-items: center; gap: 8px; font-size: 14px; margin-bottom: 8px; cursor: pointer; }
+
+        /* CARDS GRID */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+        .fiche-card { background: var(--white); border: 1px solid var(--wire-border); padding: 20px; position: relative; transition: transform 0.2s; }
+        .fiche-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .fiche-tag { font-size: 10px; font-weight: bold; background: #eee; padding: 4px 8px; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
+        .fiche-title { font-size: 18px; font-weight: bold; margin-bottom: 10px; display: block; }
+        .fiche-meta { font-size: 12px; color: #6b7280; border-top: 1px solid #eee; pt: 10px; display: flex; justify-content: space-between; margin-top: 15px; }
+
+        .btn-read { display: block; text-align: center; background: var(--accent); color: white; padding: 10px; margin-top: 15px; text-decoration: none; border-radius: 4px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-placeholder">[ LOGO ] &nbsp; [ MENU ] &nbsp; [ MON COMPTE ]</div>
+</header>
+
+<section class="search-area">
+    <div class="search-container">
+        <h1>Centre de Ressources Juridiques</h1>
+        <input type="text" class="search-bar" placeholder="Rechercher une fiche (ex: 'TVA', 'Fermeture', 'Statuts')...">
+        
+        <div class="filters-group">
+            <select>
+                <option>Tous les métiers</option>
+                <option>Artisan</option>
+                <option>Commerçant</option>
+                <option>Profession Libérale</option>
+                <option>Freelance / IT</option>
+            </select>
+            <select>
+                <option>Tous les statuts</option>
+                <option>Auto-entrepreneur (EI)</option>
+                <option>SASU / SAS</option>
+                <option>EURL / SARL</option>
+                <option>SCI</option>
+            </select>
+        </div>
+    </div>
+</section>
+
+<div class="main-content">
+    <aside class="sidebar">
+        <h3>Filtrer par</h3>
+        
+        <div class="filter-section">
+            <h4>Thématique</h4>
+            <div class="filter-opt"><input type="checkbox"> Création</div>
+            <div class="filter-opt"><input type="checkbox"> Gestion quotidienne</div>
+            <div class="filter-opt"><input type="checkbox"> Fiscalité</div>
+            <div class="filter-opt"><input type="checkbox"> Fermeture / Cession</div>
+        </div>
+
+        <div class="filter-section">
+            <h4>Niveau de difficulté</h4>
+            <div class="filter-opt"><input type="checkbox"> Débutant</div>
+            <div class="filter-opt"><input type="checkbox"> Intermédiaire</div>
+            <div class="filter-opt"><input type="checkbox"> Expert</div>
+        </div>
+    </aside>
+
+    <main>
+        <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <span><strong>12</strong> fiches trouvées</span>
+            <select style="min-width: auto;">
+                <option>Les plus récentes</option>
+                <option>Les plus lues</option>
+            </select>
+        </div>
+
+        <div class="cards-grid">
+            <div class="fiche-card">
+                <span class="fiche-tag" style="color: #b45309; background: #fef3c7;">FIN DE VIE</span>
+                <span class="fiche-title">Fermer son entreprise en 2026</span>
+                <p style="font-size: 13px; color: #4b5563;">Le guide complet pour dissoudre et liquider une société ou une EI.</p>
+                <div class="fiche-meta">
+                    <span>⏱ 8 min</span>
+                    <span>Status: EI, SAS, SARL</span>
+                </div>
+                <a href="#" class="btn-read">Consulter la fiche</a>
+            </div>
+
+            <div class="fiche-card">
+                <span class="fiche-tag" style="color: #15803d; background: #dcfce7;">CRÉATION</span>
+                <span class="fiche-title">Choisir entre EI et SASU</span>
+                <p style="font-size: 13px; color: #4b5563;">Comparatif fiscal et social pour bien démarrer votre activité.</p>
+                <div class="fiche-meta">
+                    <span>⏱ 12 min</span>
+                    <span>Status: EI, SASU</span>
+                </div>
+                <a href="#" class="btn-read">Consulter la fiche</a>
+            </div>
+
+            <div class="fiche-card">
+                <span class="fiche-tag" style="color: #1d4ed8; background: #dbeafe;">FISCALITÉ</span>
+                <span class="fiche-title">Tout savoir sur la TVA</span>
+                <p style="font-size: 13px; color: #4b5563;">Franchise en base, régime réel simplifié ou normal : comment choisir ?</p>
+                <div class="fiche-meta">
+                    <span>⏱ 10 min</span>
+                    <span>Métier: Tous</span>
+                </div>
+                <a href="#" class="btn-read">Consulter la fiche</a>
+            </div>
+
+            <div class="fiche-card">
+                <span class="fiche-tag" style="color: #7c3aed; background: #f3e8ff;">SOCIAL</span>
+                <span class="fiche-title">Embaucher son premier salarié</span>
+                <p style="font-size: 13px; color: #4b5563;">Les étapes clés : DPAE, contrat de travail et mutuelle obligatoire.</p>
+                <div class="fiche-meta">
+                    <span>⏱ 15 min</span>
+                    <span>Status: Sociétés</span>
+                </div>
+                <a href="#" class="btn-read">Consulter la fiche</a>
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
