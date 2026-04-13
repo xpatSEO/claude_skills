@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Complet - Fermeture 2026</title>
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --border: #d1d5db;
+            --accent: #2563eb; /* Bleu pro */
+            --amber: #f59e0b;
+            --dark: #1f2937;
+        }
+
+        body { font-family: sans-serif; background: var(--bg); color: var(--dark); margin: 0; padding: 20px; line-height: 1.4; }
+        .container { max-width: 900px; margin: 0 auto; border: 1px solid var(--border); background: white; padding: 30px; }
+        
+        /* Wireframe Helpers */
+        .block { border: 2px dashed var(--border); padding: 15px; margin-bottom: 20px; position: relative; }
+        .block::before { content: attr(data-label); position: absolute; top: -10px; left: 10px; background: white; font-size: 10px; padding: 0 5px; color: var(--border); font-weight: bold; }
+        
+        h1, h2 { margin-top: 0; }
+        .grid { display: grid; gap: 15px; }
+        .col-3 { grid-template-columns: repeat(3, 1fr); }
+        .col-4 { grid-template-columns: repeat(4, 1fr); }
+
+        /* Navigation / Tabs */
+        .tabs { display: flex; gap: 5px; margin-bottom: 0; }
+        .tab { padding: 10px; border: 1px solid var(--border); background: #eee; flex: 1; text-align: center; cursor: pointer; }
+        .tab.active { background: white; border-bottom: none; font-weight: bold; border-top: 3px solid var(--accent); }
+
+        /* Specific Elements */
+        .timeline-item { border-left: 2px solid var(--accent); padding-left: 15px; margin-bottom: 10px; }
+        .card { border: 1px solid var(--border); padding: 10px; border-radius: 4px; }
+        .faq-item { border-bottom: 1px solid var(--border); padding: 10px 0; }
+        .cta { background: var(--dark); color: white; padding: 20px; text-align: center; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="block" data-label="Section 00: Hero">
+        <h1>Fermer son entreprise en 2026</h1>
+        <p>[Texte descriptif court : étapes, coûts, délais]</p>
+        <small>⏱ 8 min | ✍️ Auteur | 🎯 Cible</small>
+    </div>
+
+    <div class="block" data-label="TL;DR (Résumé rapide)">
+        <div class="grid col-4">
+            <div class="card"><strong>Procédure</strong><br>Dissolution...</div>
+            <div class="card"><strong>Durée</strong><br>3-6 mois</div>
+            <div class="card"><strong>Coût</strong><br>Dès 500€</div>
+            <div class="card"><strong>EI</strong><br>Gratuit</div>
+        </div>
+    </div>
+
+    <h2>01. Quel est votre cas ?</h2>
+    <div class="tabs">
+        <div class="tab active">Entreprise Individuelle</div>
+        <div class="tab">Société</div>
+        <div class="tab">Difficultés</div>
+    </div>
+    <div class="block" data-label="Contenu dynamique (Onglets)">
+        <div class="timeline-item"><strong>Étape 1</strong>: Déclaration guichet unique</div>
+        <div class="timeline-item"><strong>Étape 2</strong>: Déclarations fiscales (TVA, Résultats)</div>
+        <div class="timeline-item"><strong>Étape 3</strong>: Radiation officielle</div>
+        <div style="background:#e0f2fe; padding:10px; margin-top:10px;">✅ <em>Bon à savoir: La radiation EI est gratuite.</em></div>
+    </div>
+
+    <h2>02. Alternative</h2>
+    <div class="block" data-label="Carte Mise en Sommeil">
+        <div style="display:flex; gap:15px; align-items:center;">
+            <div style="font-size:30px;">😴</div>
+            <div>
+                <strong>La mise en sommeil : suspendre sans fermer</strong>
+                <p>Durée maximale : 2 ans. Déclaration sous 1 mois.</p>
+                <small>[Tag: Gratuit] [Tag: Réversible]</small>
+            </div>
+        </div>
+    </div>
+
+    <h2>03. Coûts et Délais</h2>
+    <div class="block" data-label="Grille des coûts">
+        <div class="grid col-3">
+            <div class="card">JAL: ~175€</div>
+            <div class="card">Greffe: 76€ - 192€</div>
+            <div class="card">Délai: 3-6 mois</div>
+        </div>
+    </div>
+
+    <h2>04. Checklist Documents</h2>
+    <div class="block" data-label="Checklist Interactive">
+        <div>[ ] PV d'assemblée générale</div>
+        <div>[ ] Attestation de parution JAL</div>
+        <div>[ ] Formulaires M2 / M4</div>
+        <div>[ ] Comptes de liquidation</div>
+    </div>
+
+    <h2>05. Conséquences</h2>
+    <div class="block" data-label="Impacts (3 colonnes)">
+        <div class="grid col-3">
+            <div class="card"><strong>Entrepreneur</strong><br>Risque sur passif...</div>
+            <div class="card"><strong>Employés</strong><br>Licenciements...</div>
+            <div class="card"><strong>Créanciers</strong><br>Déclaration de créance...</div>
+        </div>
+    </div>
+
+    <h2>06. Questions fréquentes</h2>
+    <div class="block" data-label="Accordéons FAQ">
+        <div class="faq-item"><strong>+ Peut-on fermer du jour au lendemain ?</strong></div>
+        <div class="faq-item"><strong>+ Qui décide de fermer ?</strong></div>
+        <div class="faq-item"><strong>+ Différence Dissolution / Liquidation ?</strong></div>
+    </div>
+
+    <div class="cta">
+        <h3>Besoin d'accompagnement ?</h3>
+        <p>Un expert-comptable vous guide étape par étape.</p>
+        <button style="padding:10px 20px; font-weight:bold;">Prendre rendez-vous →</button>
+    </div>
+</div>
+
+</body>
+</html>
